@@ -119,3 +119,76 @@ th { color: var(--muted); font-size: 14px; }
   margin-bottom: 12px;
   text-transform: uppercase;
 }
+
+/* ADD THIS TO THE END OF admin-styles.css */
+
+.detail-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 16px;
+}
+.back-button {
+  background: none;
+  border: 1px solid var(--grey);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+.back-button:hover { background-color: #f8f9fa; }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.detail-card {
+  background-color: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.detail-card h3 { margin-top: 0; }
+.detail-card p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+.detail-card strong {
+  color: var(--muted);
+  width: 120px;
+  display: inline-block;
+}
+
+.availability-display {
+  list-style: none;
+  padding: 0;
+}
+.availability-display li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--grey);
+}
+.availability-display li:last-child { border-bottom: none; }
+.availability-display .day {
+  font-weight: bold;
+  width: 100px;
+  text-transform: capitalize;
+}
+.availability-display .slots { display: flex; gap: 8px; }
+.availability-display .slot {
+  background-color: #e0f5fa;
+  color: #0e697f;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.availability-display .none {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 14px;
+}
