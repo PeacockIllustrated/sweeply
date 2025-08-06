@@ -90,3 +90,49 @@ textarea{min-height:120px;grid-column:1/-1}
   .cards{grid-template-columns:1fr}
   form{grid-template-columns:1fr}
 }
+
+/* ADD THIS TO THE END OF styles.css */
+
+.availability-grid {
+  border: 1px solid #dbe9ea;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.day-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #dbe9ea;
+}
+.day-row:last-child {
+  border-bottom: none;
+}
+.day-row span:first-child {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 12px;
+}
+.day-row.header {
+  background-color: #fbfdff;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 0;
+}
+.day-row input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  justify-self: center; /* Center checkbox in the grid cell */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 560px) {
+  .day-row.header span:not(:first-child) {
+    writing-mode: vertical-rl; /* Rotate header text */
+    text-orientation: mixed;
+    padding: 10px 0;
+    font-size: 10px;
+  }
+}
