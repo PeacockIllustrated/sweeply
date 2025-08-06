@@ -1,0 +1,267 @@
+/*
+ * Sweeply Cleaner Sign‑up – External Stylesheet
+ *
+ * Defines colours, typography and layout for the landing page.
+ */
+
+/* Colour palette inspired by the Sweeply brand board */
+:root {
+    --primary: #2E9A95;
+    --secondary: #B2E4DD;
+    --background: #FCFBF7;
+    --beige: #FDFAF5;
+    --text: #022B29;
+}
+
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem 2rem 1rem;
+    background-color: var(--beige);
+}
+
+header .logo h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--beige);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-content .badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.hero-content .button:hover {
+    background-color: #247c79;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section {
+    padding: 4rem 2rem;
+    background-color: var(--background);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 240px;
+    max-width: 300px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.form-section {
+    padding: 4rem 2rem;
+    background-color: var(--beige);
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+form .checkbox-group label {
+    font-weight: normal;
+    margin-left: 0.3rem;
+}
+
+form button {
+    align-self: flex-start;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #247c79;
+}
+
+.faq {
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq details {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq p {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+    .hero-image {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 100%;
+    }
+}

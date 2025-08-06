@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweeply &ndash; Cleaner Sign‑up</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with simple logo -->
+    <header>
+        <div class="logo">
+            <h1>Sweeply</h1>
+        </div>
+    </header>
+
+    <!-- Hero section introducing the platform and special offer -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">Keep 100% for 4 weeks</div>
+            <h1>Too much mess? Simply Sweeply</h1>
+            <p>Earn extra income by helping others keep their spaces spotless. Join Sweeply as a cleaner and enjoy four weeks of 0&nbsp;% commission when you sign up today.</p>
+            <a href="#apply" class="button">Apply&nbsp;Now</a>
+        </div>
+        <div class="hero-image">
+            <!-- Illustrative brand image -->
+            <img src="assets/brand-image.png" alt="Sweeply brand illustration">
+        </div>
+    </section>
+
+    <!-- How it works section -->
+    <section class="section">
+        <h2>How it works</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Sign up &amp; verify</h3>
+                <p>Create your profile and complete identity/DBS checks to start receiving bookings.</p>
+            </div>
+            <div class="card">
+                <h3>Get bookings</h3>
+                <p>Clients in your area book services based on your availability and rates.</p>
+            </div>
+            <div class="card">
+                <h3>Clean &amp; earn</h3>
+                <p>Deliver great service, collect reviews and build your reputation.</p>
+            </div>
+            <div class="card">
+                <h3>Get paid</h3>
+                <p>Payments are processed securely, with no fees for your first four weeks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements section -->
+    <section class="section">
+        <h2>Requirements</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Eligibility</h3>
+                <p>You must be at least 18 and legally able to work in the UK.</p>
+            </div>
+            <div class="card">
+                <h3>ID &amp; DBS</h3>
+                <p>Provide a valid photo ID and consent to a standard DBS check.</p>
+            </div>
+            <div class="card">
+                <h3>Supplies</h3>
+                <p>Bring your own cleaning tools and products, or opt for client‑supplied materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application form section -->
+    <section class="form-section" id="apply">
+        <h2>Apply to become a Sweeply cleaner</h2>
+        <form>
+            <div>
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
+            <div>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div>
+                <label for="experience">Experience</label>
+                <textarea id="experience" name="experience" rows="3" placeholder="Tell us about your cleaning experience"></textarea>
+            </div>
+            <div>
+                <label for="rate">Desired hourly rate (£)</label>
+                <input type="number" id="rate" name="rate" step="0.01" min="0" placeholder="e.g. 12.50">
+            </div>
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="dbs" name="dbs"> I have a valid DBS certificate</label>
+            </div>
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="supplies" name="supplies"> I can provide my own supplies</label>
+            </div>
+            <div>
+                <label for="availability">Availability</label>
+                <textarea id="availability" name="availability" rows="3" placeholder="e.g. Weekdays evenings, weekends"></textarea>
+            </div>
+            <button type="submit">Submit application</button>
+        </form>
+        <div id="thank-you" style="display: none; text-align: center; margin-top: 2rem;">
+            <h3>Thank you for applying!</h3>
+            <p>We'll review your application and get back to you soon.</p>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="section">
+        <h2>FAQ</h2>
+        <div class="faq">
+            <details>
+                <summary>How quickly can I start working?</summary>
+                <p>Once your identity and DBS check have been verified, you can start accepting bookings immediately.</p>
+            </details>
+            <details>
+                <summary>Do I need my own transport?</summary>
+                <p>No, but it can help you accept more bookings. Many clients are within walking or cycling distance.</p>
+            </details>
+            <details>
+                <summary>How do payments work?</summary>
+                <p>Clients pay through the Sweeply app. Funds are released to your Stripe or bank account once a job is completed.</p>
+            </details>
+            <details>
+                <summary>Can I decline a job?</summary>
+                <p>Yes. You control your availability and accept only the bookings that suit you.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Page footer -->
+    <footer>
+        <p>© 2025 Sweeply. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external script -->
+    <script src="script.js"></script>
+</body>
+</html>
