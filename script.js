@@ -1,34 +1,28 @@
-/*
- * Sweeply Cleaner Sign‑up – Client‑side behaviour
- *
- * Handles form submission by storing data locally and showing a thank‑you message.
- */
+// Sweeply cleaner sign‑up form handler
+// This script listens for form submission, stores the data locally and
+// displays a thank‑you message. Replace the placeholder endpoint with
+// real backend integration when deploying.
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    const thankYou = document.getElementById('thank-you');
-
-    form.addEventListener('submit', event => {
-        event.preventDefault();
-        // Gather form data into an object
-        const data = {};
-        const formData = new FormData(form);
-        formData.forEach((value, key) => {
-            // Checkboxes that are unchecked won't appear in FormData, so default to false
-            data[key] = value;
-        });
-        // For unchecked checkboxes explicitly set to false
-        data.dbs = form.querySelector('#dbs').checked;
-        data.supplies = form.querySelector('#supplies').checked;
-        // Persist submissions in localStorage as a simple stand‑in for an API
-        const submissionsKey = 'sweeply-submissions';
-        const stored = JSON.parse(localStorage.getItem(submissionsKey) || '[]');
-        stored.push(data);
-        localStorage.setItem(submissionsKey, JSON.stringify(stored));
-        // Hide the form and show thank you message
-        form.style.display = 'none';
-        thankYou.style.display = 'block';
-        // Optionally scroll to thank you message
-        thankYou.scrollIntoView({ behavior: 'smooth' });
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('applyForm');
+  const thanks = document.getElementById('thanks');
+  if (!form || !thanks) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    // Persist the submission in local storage as a stand‑in for a real DB
+    const key = 'sweeplyApplicants';
+    const list = JSON.parse(localStorage.getItem(key) || '[]');
+    list.push(Object.assign({}, data, { submitted_at: new Date().toISOString() }));
+    localStorage.setItem(key, JSON.stringify(list));
+    // Hide the form and show thank you state
+    form.style.display = 'none';
+    thanks.style.display = 'block';
+    // Example: send data to backend (uncomment and replace YOUR_ENDPOINT)
+    // fetch('YOUR_ENDPOINT', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(data),
+    // });
+  });
 });
