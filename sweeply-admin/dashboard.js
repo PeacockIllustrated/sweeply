@@ -60,7 +60,7 @@ function loadView(viewName) {
 // --- Data Fetching & Rendering ---
 async function loadApplications() {
   try {
-    const q = query(collection(db, "applications"), where("status", "in", ["pending", null, ""]));
+    const q = query(collection(db, "applications"), where("status", "not-in", ["approved", "rejected"]));
     const querySnapshot = await getDocs(q);
     
     let html = '<h2>Pending Applications</h2><table><thead><tr><th>Name</th><th>Email</th><th>Postcode</th><th>Submitted</th><th>Actions</th></tr></thead><tbody>';
