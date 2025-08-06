@@ -92,3 +92,30 @@ input[type="email"], input[type="password"] {
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 12px; border-bottom: 1px solid var(--grey); text-align: left; }
 th { color: var(--muted); font-size: 14px; }
+
+/* Add this to admin-styles.css */
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  background-color: var(--white);
+  color: var(--muted);
+  font-weight: bold;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.btn-google:hover { background-color: #f8f9fa; }
+.google-icon { width: 18px; height: 18px; }
+
+.separator {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}

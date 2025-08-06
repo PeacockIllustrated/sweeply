@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 // Use the SAME firebaseConfig from your public site's firebase.js
 const firebaseConfig = {
@@ -32,5 +32,31 @@ loginForm.addEventListener('submit', (e) => {
     .catch((error) => {
       errorMessage.textContent = 'Invalid email or password.';
       console.error('Login error:', error);
+    });
+});
+
+// Add this new block of code in auth.js
+
+const googleSignInBtn = document.getElementById('googleSignInBtn');
+const provider = new GoogleAuthProvider();
+
+googleSignInBtn.addEventListener('click', () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      console.log('Google sign-in successful:', user);
+      window.location.href = 'dashboard.html'; // Redirect to dashboard
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.customData.email;
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      console.error('Google sign-in error:', errorMessage);
+      document.getElementById('error-message').textContent = 'Could not sign in with Google.';
     });
 });
