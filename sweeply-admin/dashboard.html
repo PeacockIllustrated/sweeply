@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweeply Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="https://sweeply-services.netlify.app/assets/sweeply-icon-white.png" alt="Sweeply Icon" class="sidebar-logo">
+        <h3>Sweeply Admin</h3>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#applications" class="nav-link active" data-view="applications">Applications</a>
+        <a href="#cleaners" class="nav-link" data-view="cleaners">Cleaners</a>
+        <a href="#clients" class="nav-link" data-view="clients">Clients</a>
+        <a href="#bookings" class="nav-link" data-view="bookings">Bookings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <span id="admin-email"></span>
+        <button id="signOutBtn" class="btn-secondary">Sign Out</button>
+      </div>
+    </aside>
+
+    <main id="main-content" class="main-content">
+      <!-- Content will be loaded here by JavaScript -->
+      <h2>Loading...</h2>
+    </main>
+  </div>
+  
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

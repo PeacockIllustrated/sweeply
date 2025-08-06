@@ -1,0 +1,94 @@
+:root {
+  --teal: #168fa8;
+  --teal-dark: #0e697f;
+  --teal-light: #80d2e7;
+  --bg: #f2faff;
+  --ink: #0b1520;
+  --muted: #5b6b74;
+  --white: #ffffff;
+  --grey: #e1e8ed;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(14, 105, 127, .1);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+/* --- Login Page --- */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.login-logo { width: 150px; margin-bottom: 16px; }
+.form-group { text-align: left; margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 4px; font-size: 14px; color: var(--muted); }
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  border-radius: var(--radius);
+  box-sizing: border-box;
+}
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn:hover { background-color: var(--teal-dark); }
+.error-message { color: #d93025; font-size: 14px; margin-top: 16px; min-height: 1em; }
+
+/* --- Dashboard Layout --- */
+.dashboard-layout { display: flex; height: 100vh; }
+.sidebar {
+  width: 240px;
+  background-color: var(--teal-dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+.sidebar-header { text-align: center; margin-bottom: 32px; }
+.sidebar-logo { width: 48px; }
+.sidebar-nav { flex-grow: 1; }
+.nav-link {
+  display: block;
+  color: #cce9f0;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+}
+.nav-link:hover { background-color: #127c94; }
+.nav-link.active { background-color: var(--teal); color: var(--white); font-weight: bold; }
+.sidebar-footer { font-size: 12px; }
+#admin-email { display: block; margin-bottom: 8px; overflow: hidden; text-overflow: ellipsis; }
+.btn-secondary {
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid var(--teal-light);
+  color: var(--white);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.btn-secondary:hover { background-color: var(--teal-light); color: var(--teal-dark); }
+.main-content { flex-grow: 1; padding: 32px; overflow-y: auto; }
+.main-content h2 { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border-bottom: 1px solid var(--grey); text-align: left; }
+th { color: var(--muted); font-size: 14px; }
