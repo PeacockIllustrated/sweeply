@@ -192,3 +192,12 @@ th { color: var(--muted); font-size: 14px; }
   font-style: italic;
   font-size: 14px;
 }
+
+/* ADD THIS TO THE END OF admin-styles.css */
+.status-select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--grey);
+  background-color: #f8f9fa;
+  width: 120px;
+}
