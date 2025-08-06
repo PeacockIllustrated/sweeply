@@ -145,10 +145,60 @@
               <option>Yes</option><option>No</option><option>Sometimes</option>
             </select>
           </div>
-          <div class="full">
-            <label>Tell us about your availability</label>
-            <textarea name="availability" placeholder="Weekdays 9–3, alternate Saturdays…"></textarea>
-          </div>
+          <!-- ADD THIS NEW BLOCK IN ITS PLACE -->
+<div class="full">
+  <label>Your weekly availability</label>
+  <div class="availability-grid">
+    <div class="day-row header">
+      <span>Day</span>
+      <span>Morning (8am-12pm)</span>
+      <span>Afternoon (12pm-5pm)</span>
+      <span>Evening (5pm-9pm)</span>
+    </div>
+    <div class="day-row">
+      <span>Monday</span>
+      <input type="checkbox" name="availability_mon_morning">
+      <input type="checkbox" name="availability_mon_afternoon">
+      <input type="checkbox" name="availability_mon_evening">
+    </div>
+    <div class="day-row">
+      <span>Tuesday</span>
+      <input type="checkbox" name="availability_tue_morning">
+      <input type="checkbox" name="availability_tue_afternoon">
+      <input type="checkbox" name="availability_tue_evening">
+    </div>
+    <div class="day-row">
+      <span>Wednesday</span>
+      <input type="checkbox" name="availability_wed_morning">
+      <input type="checkbox" name="availability_wed_afternoon">
+      <input type="checkbox" name="availability_wed_evening">
+    </div>
+    <div class="day-row">
+      <span>Thursday</span>
+      <input type="checkbox" name="availability_thu_morning">
+      <input type="checkbox" name="availability_thu_afternoon">
+      <input type="checkbox" name="availability_thu_evening">
+    </div>
+    <div class="day-row">
+      <span>Friday</span>
+      <input type="checkbox" name="availability_fri_morning">
+      <input type="checkbox" name="availability_fri_afternoon">
+      <input type="checkbox" name="availability_fri_evening">
+    </div>
+    <div class="day-row">
+      <span>Saturday</span>
+      <input type="checkbox" name="availability_sat_morning">
+      <input type="checkbox" name="availability_sat_afternoon">
+      <input type="checkbox" name="availability_sat_evening">
+    </div>
+    <div class="day-row">
+      <span>Sunday</span>
+      <input type="checkbox" name="availability_sun_morning">
+      <input type="checkbox" name="availability_sun_afternoon">
+      <input type="checkbox" name="availability_sun_evening">
+    </div>
+  </div>
+</div>
           <div class="full"><button class="btn btn-primary" type="submit">Submit your application</button></div>
           <p class="notice full">By submitting you agree to our processing of your data in line with GDPR.</p>
         </form>
